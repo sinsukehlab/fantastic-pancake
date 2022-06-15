@@ -93,10 +93,12 @@
   function handleClickInput(evt) {
     evt.target.closest('td').innerHTML = HUMAN
     if (hasWin()) {
+      gameover.insertAdjacentHTML('beforeend', ' HUMAN won!')
       return endGame()
     }
     runRobotTurn()
     if (hasWin()) {
+      gameover.insertAdjacentHTML('beforeend', ' ROBOT won!')
       return endGame()
     }
   }
